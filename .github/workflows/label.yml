@@ -6,7 +6,21 @@
 # https://github.com/actions/labeler
 
 name: Labeler
-on: [pull_request_target]
+on:
+  push:
+    branches:
+      - release/**
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Select environment"
+        required: true
+        default: "development"
+        type: choice
+        options:
+          - development
+          - production
+          - main
 
 jobs:
   label:
