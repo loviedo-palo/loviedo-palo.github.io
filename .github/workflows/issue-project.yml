@@ -16,7 +16,7 @@ jobs:
         run: echo "Issue has the 'open' label"
 
       - name: Add issue to project
-        uses: actions/add-to-project@v1
+        uses: actions/add-to-project@v1.0.2
         with:
           project-url: "https://github.com/users/loviedo-palo/projects/1"
           github-token: ${{ secrets.GITHUB_TOKEN }}
